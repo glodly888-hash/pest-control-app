@@ -1,0 +1,26 @@
+/* 来源：舍为思智慧科技网站设计提示词。移动端沿用色彩，调整网站导航尺度。 */
+:root {
+  --primary: #003d7a;
+  --secondary: #4a9fd8;
+  --white: #fff;
+  --background: #f5f8fa;
+  --text: #333;
+  --muted: #666;
+  --line: #dce6ee;
+  --blue-tint: #eaf3fa;
+  --danger: #94421b;
+  --danger-bg: #fff3eb;
+  --success: #1c695c;
+  --success-bg: #eaf5f1;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 60px;
+  --button-radius: 4px;
+  --card-radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 61, 122, 0.1);
+  --font:
+    Arial, "Source Han Sans SC", "Noto Sans CJK SC", "PingFang SC",
+    "Microsoft YaHei", Helvetica, sans-serif;
+}

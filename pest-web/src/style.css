@@ -1,0 +1,44 @@
+:root {
+  /* 品牌 VI 深蓝 #003D7A 为主色，浅蓝 #4A9FD8 为辅 */
+  --c-primary: #003d7a;
+  --c-secondary: #4a9fd8;
+  --c-danger: #c0392b;
+  --c-text: #243447;
+  --c-text-weak: #5b6775;
+  --c-border: #c9d6e4;
+  --c-bg: #f5f7fa;
+  --c-card: #ffffff;
+  --radius-card: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei',
+    'Segoe UI', Roboto, sans-serif;
+  color: var(--c-text);
+  background: var(--c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+}
+
+.card {
+  background: var(--c-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--c-border);
+  padding: 16px;
+}

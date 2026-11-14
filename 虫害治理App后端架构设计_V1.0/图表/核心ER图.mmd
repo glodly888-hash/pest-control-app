@@ -1,0 +1,16 @@
+erDiagram
+  customer ||--o{ store : owns
+  store ||--o{ service_task : schedules
+  store ||--o{ facility : owns
+  store ||--o{ risk : tracks
+  risk ||--o{ risk_followup : follows
+  service_task ||--o| service : executes
+  service ||--o| service_draft : edits
+  service ||--o{ service_snapshot : freezes
+  offline_context ||--o{ service_snapshot : fixes
+  service_snapshot ||--o{ service_signature : confirms
+  service_snapshot ||--o{ snapshot_attachment : references
+  attachment ||--o{ snapshot_attachment : included
+  service_snapshot ||--o| publication_job : publishes
+  service_snapshot ||--o| service_report : generates
+  service ||--o{ service_report : versions

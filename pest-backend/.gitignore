@@ -1,0 +1,26 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+
+# 凭据与本地配置（绝不提交）
+*.env
+.env
+application-local.yml
+
+# 日志
+*.log
+logs/

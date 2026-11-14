@@ -1,0 +1,143 @@
+{
+  "mysqlVersion": "9.6.0",
+  "tableCount": 44,
+  "foreignKeyCount": 96,
+  "checks": [
+    {
+      "name": "一任务仅一个实际服务",
+      "passed": true,
+      "expected_error": "1062",
+      "output": "",
+      "error": "ERROR 1062 (23000) at line 2: Duplicate entry '(\\xDA\\x08h\\xB1\\x9AV0\\x96\\x07`b2v:l' for key 'service.uk_service_task'"
+    },
+    {
+      "name": "设施不能引用其他门店分区",
+      "passed": true,
+      "expected_error": "1452",
+      "output": "",
+      "error": "ERROR 1452 (23000) at line 2: Cannot add or update a child row: a foreign key constraint fails (`pest_arch_test`.`facility`, CONSTRAINT `fk_facility_2` FOREIGN KEY (`area_id`, `store_id`) REFERENCES `"
+    },
+    {
+      "name": "UNKNOWN不能写数量0",
+      "passed": true,
+      "expected_error": "3819",
+      "output": "",
+      "error": "ERROR 3819 (HY000) at line 2: Check constraint 'ck_snapshot_finding_3' is violated."
+    },
+    {
+      "name": "UNKNOWN可使用NULL",
+      "passed": true,
+      "expected_error": null,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "EXACT允许零捕获",
+      "passed": true,
+      "expected_error": null,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "数量不得超过接口上限",
+      "passed": true,
+      "expected_error": "3819",
+      "output": "",
+      "error": "ERROR 3819 (HY000) at line 2: Check constraint 'ck_snapshot_finding_1' is violated."
+    },
+    {
+      "name": "未检查必须有原因",
+      "passed": true,
+      "expected_error": "3819",
+      "output": "",
+      "error": "ERROR 3819 (HY000) at line 2: Check constraint 'ck_snapshot_inspection_1' is violated."
+    },
+    {
+      "name": "无法确认与未检查可分开保存",
+      "passed": true,
+      "expected_error": null,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "低于5秒阅读不能创建合格回执",
+      "passed": true,
+      "expected_error": "3819",
+      "output": "",
+      "error": "ERROR 3819 (HY000) at line 2: Check constraint 'ck_preview_session_1' is violated."
+    },
+    {
+      "name": "每角色仅一条有效签字",
+      "passed": true,
+      "expected_error": "1062",
+      "output": "",
+      "error": "ERROR 1062 (23000) at line 2: Duplicate entry '\\xE1nS\\x05\\x9D\\xBBT\\x18\\x81\\xB2\\xFB4\\x81\\xF3\\x07u-STAFF' for key 'service_signature.uk_signature_active'"
+    },
+    {
+      "name": "评价不能为6星",
+      "passed": true,
+      "expected_error": "3819",
+      "output": "",
+      "error": "ERROR 3819 (HY000) at line 2: Check constraint 'ck_service_signature_2' is violated."
+    },
+    {
+      "name": "同一服务不能有两份当前报告",
+      "passed": true,
+      "expected_error": "1062",
+      "output": "",
+      "error": "ERROR 1062 (23000) at line 2: Duplicate entry '!\\x02\\x86\\xCE/[\\`\\xA9\\xFD\\x1DC{\\x1Bu\\xBB' for key 'service_report.uk_report_current'"
+    },
+    {
+      "name": "旧版替代后新版本可发布",
+      "passed": true,
+      "expected_error": null,
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "签名所引用附件不能删除",
+      "passed": true,
+      "expected_error": "1451",
+      "output": "",
+      "error": "ERROR 1451 (23000) at line 2: Cannot delete or update a parent row: a foreign key constraint fails (`pest_arch_test`.`service_signature`, CONSTRAINT `fk_service_signature_5` FOREIGN KEY (`attachment_i"
+    },
+    {
+      "name": "分来源统计保持15和10与38",
+      "passed": true,
+      "expected_error": null,
+      "output": "CUSTOMER\t15\nFACILITY\t10\nFACILITY\t38",
+      "error": ""
+    },
+    {
+      "name": "同检查可保存不同虫种捕获",
+      "passed": true,
+      "expected_error": null,
+      "output": "2",
+      "error": ""
+    },
+    {
+      "name": "错误草稿版本更新影响0行",
+      "passed": true,
+      "expected_error": null,
+      "output": "0",
+      "error": ""
+    },
+    {
+      "name": "两连接竞争同一草稿版本仅一个成功",
+      "passed": true,
+      "output": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "name": "业务事务回滚后原始提交包仍在",
+      "passed": true,
+      "expected_error": null,
+      "output": "7B7D",
+      "error": ""
+    }
+  ],
+  "passed": true,
+  "scope": "仅验证DDL与SQL约束；非Java应用端到端测试，未执行MySQL8.4"
+}

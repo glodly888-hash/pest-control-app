@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sws</groupId>
+    <artifactId>pest-backend</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>pest-backend</name>
+    <description>虫害治理 App 统一后端（模块化单体，API + Worker 双进程）</description>
+
+    <modules>
+        <module>pest-domain</module>
+        <module>pest-application</module>
+        <module>pest-infrastructure</module>
+        <module>pest-api</module>
+        <module>pest-worker</module>
+        <module>pest-contract</module>
+        <module>pest-db</module>
+    </modules>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.release>21</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- 保留方法参数名，供 Spring MVC @RequestParam/@PathVariable 反射使用 -->
+        <maven.compiler.parameters>true</maven.compiler.parameters>
+        <!-- 开工时锁定经安全扫描及兼容测试通过的补丁版本，不使用动态 latest -->
+        <!-- 注：架构文档写 4.1.2，但官方最新稳定版为 4.1.1（2026-08-20），4.1.2 尚未发布，先锁 4.1.1 -->
+        <spring-boot.version>4.1.1</spring-boot.version>
+        <flyway.version>11.7.2</flyway.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

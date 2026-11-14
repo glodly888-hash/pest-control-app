@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-11",
+  "sources": [
+    {
+      "file": "虫害治理App白模UI_V1.0/index.html",
+      "sha256": "50506e00753969d9569b0c3b0911a3645ede6685cdba31136c2d61464f7dcf57"
+    },
+    {
+      "file": "虫害治理App接口文档_V1.0/openapi.json",
+      "sha256": "5fca03e6721554b13372d9f0f657623bab7a7dcfb9b7021c3ff4ffafc73820a4"
+    },
+    {
+      "file": "虫害治理App接口文档_V1.0/虫害治理App接口文档_V1.0.md",
+      "sha256": "949e3ce97a629a5a205cb4ac67fb4a737fec17eb4e2f3aa9f7b48c8388f10c12"
+    },
+    {
+      "file": "虫害治理App开发需求文档_V1.0.md",
+      "sha256": "3859d2fe752cdb6d572c2247da1ce2ab0d8f339f19f8bf6a74618d8a39ae73a8"
+    }
+  ],
+  "confirmed_stack": [
+    "Java",
+    "MySQL"
+  ],
+  "proposed_baseline": {
+    "java": "Temurin 21 LTS",
+    "springBoot": "4.1.2",
+    "mysql": "8.4 LTS"
+  },
+  "interfaceOperations": 54,
+  "tables": 44,
+  "columns": 464,
+  "foreignKeys": 96
+}

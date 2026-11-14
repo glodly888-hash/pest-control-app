@@ -1,0 +1,8 @@
+flowchart TB
+  A[安卓 App 本地数据与文件] -->|HTTPS| G[认证与数据范围]
+  B[网页后台] -->|HTTPS| G
+  G --> API[Spring Boot API 模块化单体]
+  API --> DB[(MySQL 8.4 业务表与任务队列)]
+  W[Java Worker 独立进程] -->|租约领取与原子提交| DB
+  API --> O[(私有对象存储)]
+  W -->|校验文件与渲染 PDF| O

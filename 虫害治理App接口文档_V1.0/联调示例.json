@@ -1,0 +1,1151 @@
+{
+  "说明": "脱敏契约测试数据；附件摘要为占位，不是真实图片。上下文只含1设施1风险，用于协议联调，不替代PRD的9设施7风险展示验收。",
+  "offlineContext": {
+    "id": "00000000-0000-4000-8000-000000000031",
+    "schemaVersion": "1.0",
+    "contextDigest": "774e496688a8ad49886bb15885abcf64d526f6b40b65a6b0e3b6f459306eaf48",
+    "contextBody": {
+      "store": {
+        "id": "00000000-0000-4000-8000-000000000011",
+        "customerId": "00000000-0000-4000-8000-000000000012",
+        "code": "S001",
+        "name": "示例餐饮门店",
+        "address": "示例地址1号",
+        "timezone": "Asia/Shanghai",
+        "regionId": "00000000-0000-4000-8000-000000000013",
+        "revision": 1,
+        "areas": [
+          {
+            "id": "00000000-0000-4000-8000-000000000041",
+            "name": "后区",
+            "floor": "一层"
+          }
+        ]
+      },
+      "employee": {
+        "id": "00000000-0000-4000-8000-000000000003",
+        "companyId": "00000000-0000-4000-8000-000000000001",
+        "employeeCode": "PC008",
+        "name": "示例员工",
+        "roles": [
+          "EMPLOYEE"
+        ],
+        "permissions": [
+          "task:own",
+          "report:correct"
+        ],
+        "permissionVersion": 1
+      },
+      "task": {
+        "id": "00000000-0000-4000-8000-000000000021",
+        "storeId": "00000000-0000-4000-8000-000000000011",
+        "storeName": "示例餐饮门店",
+        "serviceType": "ROUTINE",
+        "status": "PENDING",
+        "plannedDate": "2026-11-11",
+        "assigneeId": "00000000-0000-4000-8000-000000000003",
+        "assignmentVersion": 1,
+        "revision": 1,
+        "instructions": "常规服务",
+        "source": "PLAN",
+        "isOverdue": false,
+        "moduleStates": []
+      },
+      "facilities": [
+        {
+          "id": "00000000-0000-4000-8000-000000000051",
+          "storeId": "00000000-0000-4000-8000-000000000011",
+          "code": "I0001",
+          "typeId": "00000000-0000-4000-8000-000000000052",
+          "typeName": "灭蝇灯",
+          "areaId": "00000000-0000-4000-8000-000000000041",
+          "position": "清洁池上方",
+          "status": "ACTIVE",
+          "revision": 1,
+          "updatedAt": "2026-11-11T09:06:00+08:00"
+        }
+      ],
+      "openRisks": [
+        {
+          "id": "00000000-0000-4000-8000-000000000071",
+          "storeId": "00000000-0000-4000-8000-000000000011",
+          "typeId": "00000000-0000-4000-8000-000000000072",
+          "pestTypeIds": [
+            "00000000-0000-4000-8000-000000000063"
+          ],
+          "areaId": "00000000-0000-4000-8000-000000000041",
+          "position": "配电柜上方",
+          "description": "结构孔洞",
+          "suggestion": "安排封堵",
+          "responsibleParty": "门店工程人员",
+          "ownerId": "00000000-0000-4000-8000-000000000003",
+          "dueDate": "2026-11-13",
+          "status": "PENDING",
+          "revision": 1,
+          "discoveredAt": "2026-11-11T09:06:00+08:00",
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000203",
+              "sha256": "0d0e0900d6d1ec8fb33aeb5482e8789be44b8e98f4a0f40c11597f96cd21110d",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ]
+        }
+      ],
+      "lastAssessment": {
+        "isConfirmed": true,
+        "confirmedAt": "2026-11-11T09:06:00+08:00",
+        "sourceRevision": 1,
+        "hasChanged": false,
+        "storeType": "ENCLOSED",
+        "shutterDoor": "ABSENT",
+        "foldingDoor": "ABSENT",
+        "airCurtain": "OFF",
+        "airAngle": "FAIL",
+        "openCeiling": "NO",
+        "sewerWellCount": {
+          "kind": "EXACT",
+          "value": 1
+        },
+        "greeneryDescription": "少量绿植",
+        "nearbyRenovation": "YES",
+        "nearbyVacancy": "NO",
+        "remarks": "已与门店确认",
+        "photos": [
+          {
+            "attachmentId": "00000000-0000-4000-8000-000000000201",
+            "sha256": "ece673cdc8b58a07f5a74c813bcd93ff0fb8b8365acb672a25fb30f63a3b70a0",
+            "mediaType": "image/png",
+            "sizeBytes": 1024
+          }
+        ]
+      },
+      "dictionaries": {
+        "version": "1",
+        "items": [
+          {
+            "id": "00000000-0000-4000-8000-000000000061",
+            "kind": "PEST",
+            "code": "FLY",
+            "name": "飞虫",
+            "isActive": true,
+            "revision": 1
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000062",
+            "kind": "PEST",
+            "code": "OTHER",
+            "name": "其他",
+            "isActive": true,
+            "revision": 1
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000063",
+            "kind": "PEST",
+            "code": "RODENT",
+            "name": "鼠类",
+            "isActive": true,
+            "revision": 1
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000052",
+            "kind": "FACILITY_TYPE",
+            "code": "FLY_LAMP",
+            "name": "灭蝇灯",
+            "isActive": true,
+            "revision": 1
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000072",
+            "kind": "RISK_TYPE",
+            "code": "STRUCTURE",
+            "name": "建筑结构",
+            "isActive": true,
+            "revision": 1
+          },
+          {
+            "id": "00000000-0000-4000-8000-000000000041",
+            "kind": "AREA",
+            "code": "BACK",
+            "name": "后区",
+            "isActive": true,
+            "revision": 1
+          }
+        ]
+      },
+      "notices": [
+        {
+          "id": "00000000-0000-4000-8000-000000000901",
+          "version": "1",
+          "title": "服务须知",
+          "content": "沟通后开始现场服务",
+          "effectiveAt": "2026-11-11T09:06:00+08:00"
+        }
+      ],
+      "templateVersion": "1.0",
+      "templateSha256": "dcc7e8acf16f2ad6ffaf04fd964f89c9f7fbe2bbacc6751b58e2cb88aca6cecc",
+      "brand": {
+        "companyName": "示例虫控公司",
+        "contact": "示例联系方式",
+        "footer": "服务报告"
+      },
+      "requiredAssets": []
+    },
+    "grantId": "00000000-0000-4000-8000-000000000032",
+    "permissionVersion": 1,
+    "issuedAt": "2026-11-11T09:06:00+08:00",
+    "expiresAt": "2026-11-12T09:06:00+08:00",
+    "downloadBytes": 0
+  },
+  "draftWrite": {
+    "contextId": "00000000-0000-4000-8000-000000000031",
+    "content": {
+      "checkin": {
+        "arrivedAt": "2026-11-11T09:06:00+08:00",
+        "location": {
+          "latitude": 31.9,
+          "longitude": 120.3,
+          "accuracyMeters": 12,
+          "provider": "GPS",
+          "capturedAt": "2026-11-11T09:06:00+08:00"
+        },
+        "locationStatus": "NORMAL",
+        "storefrontPhotos": [
+          {
+            "attachmentId": "00000000-0000-4000-8000-000000000200",
+            "sha256": "0ab249e38b7673a52955a5f40d846807a0f2a5ba7f8a2aa454dd6938e6597294",
+            "mediaType": "image/png",
+            "sizeBytes": 1024
+          }
+        ]
+      },
+      "noticeConfirmations": [
+        {
+          "noticeId": "00000000-0000-4000-8000-000000000901",
+          "version": "1",
+          "isAcknowledged": true,
+          "confirmedAt": "2026-11-11T09:06:00+08:00"
+        }
+      ],
+      "customerFeedback": {
+        "state": "FOUND",
+        "findings": [
+          {
+            "id": "00000000-0000-4000-8000-000000000091",
+            "source": "CUSTOMER",
+            "pestTypeId": "00000000-0000-4000-8000-000000000061",
+            "areaId": "00000000-0000-4000-8000-000000000041",
+            "position": "后区清洁池",
+            "observedAt": "2026-11-11T09:06:00+08:00",
+            "quantity": {
+              "kind": "EXACT",
+              "value": 15
+            },
+            "description": "客户反馈飞虫15只",
+            "photos": [],
+            "treatmentIds": [
+              "00000000-0000-4000-8000-000000000081"
+            ]
+          }
+        ],
+        "confirmedAt": "2026-11-11T09:06:00+08:00"
+      },
+      "onSiteFindings": {
+        "state": "NONE_FOUND",
+        "findings": [],
+        "confirmedAt": "2026-11-11T09:06:00+08:00"
+      },
+      "assessment": {
+        "isConfirmed": true,
+        "confirmedAt": "2026-11-11T09:06:00+08:00",
+        "sourceRevision": 1,
+        "hasChanged": false,
+        "storeType": "ENCLOSED",
+        "shutterDoor": "ABSENT",
+        "foldingDoor": "ABSENT",
+        "airCurtain": "OFF",
+        "airAngle": "FAIL",
+        "openCeiling": "NO",
+        "sewerWellCount": {
+          "kind": "EXACT",
+          "value": 1
+        },
+        "greeneryDescription": "少量绿植",
+        "nearbyRenovation": "YES",
+        "nearbyVacancy": "NO",
+        "remarks": "已与门店确认",
+        "photos": [
+          {
+            "attachmentId": "00000000-0000-4000-8000-000000000201",
+            "sha256": "ece673cdc8b58a07f5a74c813bcd93ff0fb8b8365acb672a25fb30f63a3b70a0",
+            "mediaType": "image/png",
+            "sizeBytes": 1024
+          }
+        ]
+      },
+      "inspections": [
+        {
+          "id": "00000000-0000-4000-8000-000000000092",
+          "facilityId": "00000000-0000-4000-8000-000000000051",
+          "facilityRevision": 1,
+          "checkResult": "CHECKED",
+          "facilityCondition": "NORMAL",
+          "consumableAction": "REPLACED",
+          "captures": [
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000061",
+              "quantity": {
+                "kind": "EXACT",
+                "value": 10
+              },
+              "treatmentIds": [
+                "00000000-0000-4000-8000-000000000081"
+              ]
+            },
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000062",
+              "quantity": {
+                "kind": "EXACT",
+                "value": 38
+              },
+              "treatmentIds": [
+                "00000000-0000-4000-8000-000000000081"
+              ]
+            }
+          ],
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000202",
+              "sha256": "5089dec566e98bfdee5bc6d3c37ea456012b2013aa13ff96f9e002778d0b30f2",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ],
+          "remarks": "已维护",
+          "inspectedAt": "2026-11-11T09:06:00+08:00",
+          "treatmentIds": [
+            "00000000-0000-4000-8000-000000000081"
+          ]
+        }
+      ],
+      "facilityChanges": [],
+      "newRisks": [],
+      "riskFollowups": [
+        {
+          "id": "00000000-0000-4000-8000-000000000093",
+          "riskId": "00000000-0000-4000-8000-000000000071",
+          "expectedRiskRevision": 1,
+          "result": "NO_CHANGE",
+          "description": "结构孔洞尚未完成封堵",
+          "materialSource": "ON_SITE",
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000203",
+              "sha256": "0d0e0900d6d1ec8fb33aeb5482e8789be44b8e98f4a0f40c11597f96cd21110d",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ],
+          "occurredAt": "2026-11-11T09:06:00+08:00"
+        }
+      ],
+      "treatments": [
+        {
+          "id": "00000000-0000-4000-8000-000000000081",
+          "type": "CLEANING",
+          "targets": [
+            {
+              "type": "FINDING",
+              "id": "00000000-0000-4000-8000-000000000091"
+            },
+            {
+              "type": "INSPECTION",
+              "id": "00000000-0000-4000-8000-000000000092"
+            }
+          ],
+          "position": "后区清洁池",
+          "description": "清理残渣并更换耗材",
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000204",
+              "sha256": "c077a14320b563f3169531d91e72c682c298634d9d84603af6689899b0ad8fb4",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ],
+          "chemicalUses": [],
+          "occurredAt": "2026-11-11T09:30:00+08:00",
+          "nextFocus": "复查清洁保持情况"
+        }
+      ],
+      "summary": {
+        "mainFindings": "客户反馈飞虫，设施捕获分来源记录",
+        "measuresTaken": "清洁和耗材更换",
+        "unresolvedIssues": "孔洞仍需整改",
+        "customerActions": "安排封堵",
+        "nextFocus": "复查风险和捕获情况",
+        "weather": "CLOUDY",
+        "ratings": [
+          {
+            "pestTypeId": "00000000-0000-4000-8000-000000000061",
+            "level": "MEDIUM",
+            "basis": "存在客户反馈及设施捕获"
+          },
+          {
+            "pestTypeId": "00000000-0000-4000-8000-000000000062",
+            "level": "UNASSESSED",
+            "basis": "其他捕获尚未分类"
+          }
+        ]
+      },
+      "serviceAttachments": []
+    },
+    "savedAt": "2026-11-11T09:46:00+08:00"
+  },
+  "snapshotPayload": {
+    "schemaVersion": "1.0",
+    "serviceId": "00000000-0000-4000-8000-000000000022",
+    "taskId": "00000000-0000-4000-8000-000000000021",
+    "contextId": "00000000-0000-4000-8000-000000000031",
+    "contextDigest": "774e496688a8ad49886bb15885abcf64d526f6b40b65a6b0e3b6f459306eaf48",
+    "content": {
+      "checkin": {
+        "arrivedAt": "2026-11-11T09:06:00+08:00",
+        "location": {
+          "latitude": 31.9,
+          "longitude": 120.3,
+          "accuracyMeters": 12,
+          "provider": "GPS",
+          "capturedAt": "2026-11-11T09:06:00+08:00"
+        },
+        "locationStatus": "NORMAL",
+        "storefrontPhotos": [
+          {
+            "attachmentId": "00000000-0000-4000-8000-000000000200",
+            "sha256": "0ab249e38b7673a52955a5f40d846807a0f2a5ba7f8a2aa454dd6938e6597294",
+            "mediaType": "image/png",
+            "sizeBytes": 1024
+          }
+        ]
+      },
+      "noticeConfirmations": [
+        {
+          "noticeId": "00000000-0000-4000-8000-000000000901",
+          "version": "1",
+          "isAcknowledged": true,
+          "confirmedAt": "2026-11-11T09:06:00+08:00"
+        }
+      ],
+      "customerFeedback": {
+        "state": "FOUND",
+        "findings": [
+          {
+            "id": "00000000-0000-4000-8000-000000000091",
+            "source": "CUSTOMER",
+            "pestTypeId": "00000000-0000-4000-8000-000000000061",
+            "areaId": "00000000-0000-4000-8000-000000000041",
+            "position": "后区清洁池",
+            "observedAt": "2026-11-11T09:06:00+08:00",
+            "quantity": {
+              "kind": "EXACT",
+              "value": 15
+            },
+            "description": "客户反馈飞虫15只",
+            "photos": [],
+            "treatmentIds": [
+              "00000000-0000-4000-8000-000000000081"
+            ]
+          }
+        ],
+        "confirmedAt": "2026-11-11T09:06:00+08:00"
+      },
+      "onSiteFindings": {
+        "state": "NONE_FOUND",
+        "findings": [],
+        "confirmedAt": "2026-11-11T09:06:00+08:00"
+      },
+      "assessment": {
+        "isConfirmed": true,
+        "confirmedAt": "2026-11-11T09:06:00+08:00",
+        "sourceRevision": 1,
+        "hasChanged": false,
+        "storeType": "ENCLOSED",
+        "shutterDoor": "ABSENT",
+        "foldingDoor": "ABSENT",
+        "airCurtain": "OFF",
+        "airAngle": "FAIL",
+        "openCeiling": "NO",
+        "sewerWellCount": {
+          "kind": "EXACT",
+          "value": 1
+        },
+        "greeneryDescription": "少量绿植",
+        "nearbyRenovation": "YES",
+        "nearbyVacancy": "NO",
+        "remarks": "已与门店确认",
+        "photos": [
+          {
+            "attachmentId": "00000000-0000-4000-8000-000000000201",
+            "sha256": "ece673cdc8b58a07f5a74c813bcd93ff0fb8b8365acb672a25fb30f63a3b70a0",
+            "mediaType": "image/png",
+            "sizeBytes": 1024
+          }
+        ]
+      },
+      "inspections": [
+        {
+          "id": "00000000-0000-4000-8000-000000000092",
+          "facilityId": "00000000-0000-4000-8000-000000000051",
+          "facilityRevision": 1,
+          "checkResult": "CHECKED",
+          "facilityCondition": "NORMAL",
+          "consumableAction": "REPLACED",
+          "captures": [
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000061",
+              "quantity": {
+                "kind": "EXACT",
+                "value": 10
+              },
+              "treatmentIds": [
+                "00000000-0000-4000-8000-000000000081"
+              ]
+            },
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000062",
+              "quantity": {
+                "kind": "EXACT",
+                "value": 38
+              },
+              "treatmentIds": [
+                "00000000-0000-4000-8000-000000000081"
+              ]
+            }
+          ],
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000202",
+              "sha256": "5089dec566e98bfdee5bc6d3c37ea456012b2013aa13ff96f9e002778d0b30f2",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ],
+          "remarks": "已维护",
+          "inspectedAt": "2026-11-11T09:06:00+08:00",
+          "treatmentIds": [
+            "00000000-0000-4000-8000-000000000081"
+          ]
+        }
+      ],
+      "facilityChanges": [],
+      "newRisks": [],
+      "riskFollowups": [
+        {
+          "id": "00000000-0000-4000-8000-000000000093",
+          "riskId": "00000000-0000-4000-8000-000000000071",
+          "expectedRiskRevision": 1,
+          "result": "NO_CHANGE",
+          "description": "结构孔洞尚未完成封堵",
+          "materialSource": "ON_SITE",
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000203",
+              "sha256": "0d0e0900d6d1ec8fb33aeb5482e8789be44b8e98f4a0f40c11597f96cd21110d",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ],
+          "occurredAt": "2026-11-11T09:06:00+08:00"
+        }
+      ],
+      "treatments": [
+        {
+          "id": "00000000-0000-4000-8000-000000000081",
+          "type": "CLEANING",
+          "targets": [
+            {
+              "type": "FINDING",
+              "id": "00000000-0000-4000-8000-000000000091"
+            },
+            {
+              "type": "INSPECTION",
+              "id": "00000000-0000-4000-8000-000000000092"
+            }
+          ],
+          "position": "后区清洁池",
+          "description": "清理残渣并更换耗材",
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000204",
+              "sha256": "c077a14320b563f3169531d91e72c682c298634d9d84603af6689899b0ad8fb4",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ],
+          "chemicalUses": [],
+          "occurredAt": "2026-11-11T09:30:00+08:00",
+          "nextFocus": "复查清洁保持情况"
+        }
+      ],
+      "summary": {
+        "mainFindings": "客户反馈飞虫，设施捕获分来源记录",
+        "measuresTaken": "清洁和耗材更换",
+        "unresolvedIssues": "孔洞仍需整改",
+        "customerActions": "安排封堵",
+        "nextFocus": "复查风险和捕获情况",
+        "weather": "CLOUDY",
+        "ratings": [
+          {
+            "pestTypeId": "00000000-0000-4000-8000-000000000061",
+            "level": "MEDIUM",
+            "basis": "存在客户反馈及设施捕获"
+          },
+          {
+            "pestTypeId": "00000000-0000-4000-8000-000000000062",
+            "level": "UNASSESSED",
+            "basis": "其他捕获尚未分类"
+          }
+        ]
+      },
+      "serviceAttachments": []
+    }
+  },
+  "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+  "previewSession": {
+    "id": "00000000-0000-4000-8000-000000000105",
+    "snapshotId": "00000000-0000-4000-8000-000000000101",
+    "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+    "startedAt": "2026-11-11T09:47:40+08:00",
+    "endedAt": "2026-11-11T09:47:50+08:00",
+    "visibleDurationMs": 10000,
+    "isOffline": true
+  },
+  "staffSignature": {
+    "id": "00000000-0000-4000-8000-000000000103",
+    "role": "STAFF",
+    "snapshotId": "00000000-0000-4000-8000-000000000101",
+    "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+    "signerName": "示例员工",
+    "staffUserId": "00000000-0000-4000-8000-000000000003",
+    "signatureImage": {
+      "attachmentId": "00000000-0000-4000-8000-000000000205",
+      "sha256": "64fdaef45ba05d5e2f796d488aa8e1b008aa2266e2deab1e263007acb04df193",
+      "mediaType": "image/png",
+      "sizeBytes": 1024
+    },
+    "signedAt": "2026-11-11T09:47:00+08:00",
+    "deviceId": "00000000-0000-4000-8000-000000000005",
+    "isAcknowledged": true,
+    "attestationHash": "cd70bed29de68e352ad558478ce307b258bceb71886bf2cf724a636174f24626"
+  },
+  "customerSignature": {
+    "id": "00000000-0000-4000-8000-000000000104",
+    "role": "CUSTOMER",
+    "snapshotId": "00000000-0000-4000-8000-000000000101",
+    "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+    "signerName": "示例确认人",
+    "staffSignatureId": "00000000-0000-4000-8000-000000000103",
+    "signatureImage": {
+      "attachmentId": "00000000-0000-4000-8000-000000000206",
+      "sha256": "362f2e51696b381c609eba87d83d2e58f32b2f9f76c9ae9dedf32a831061b1fc",
+      "mediaType": "image/png",
+      "sizeBytes": 1024
+    },
+    "signedAt": "2026-11-11T09:48:00+08:00",
+    "deviceId": "00000000-0000-4000-8000-000000000005",
+    "isAcknowledged": true,
+    "previewSessionId": "00000000-0000-4000-8000-000000000105",
+    "attestationHash": "f759e085fc199cc82e96a05214482d7852606b2bca3688dc82d03062ace37066"
+  },
+  "publicationRequest": {
+    "id": "00000000-0000-4000-8000-000000000106",
+    "snapshotId": "00000000-0000-4000-8000-000000000101",
+    "staffSignatureId": "00000000-0000-4000-8000-000000000103",
+    "customerSignatureId": "00000000-0000-4000-8000-000000000104"
+  },
+  "offlineSubmission": {
+    "id": "00000000-0000-4000-8000-000000000107",
+    "deviceId": "00000000-0000-4000-8000-000000000005",
+    "contextId": "00000000-0000-4000-8000-000000000031",
+    "taskId": "00000000-0000-4000-8000-000000000021",
+    "serviceId": "00000000-0000-4000-8000-000000000022",
+    "assignmentVersion": 1,
+    "baseDraftRevision": 0,
+    "draft": {
+      "contextId": "00000000-0000-4000-8000-000000000031",
+      "content": {
+        "checkin": {
+          "arrivedAt": "2026-11-11T09:06:00+08:00",
+          "location": {
+            "latitude": 31.9,
+            "longitude": 120.3,
+            "accuracyMeters": 12,
+            "provider": "GPS",
+            "capturedAt": "2026-11-11T09:06:00+08:00"
+          },
+          "locationStatus": "NORMAL",
+          "storefrontPhotos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000200",
+              "sha256": "0ab249e38b7673a52955a5f40d846807a0f2a5ba7f8a2aa454dd6938e6597294",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ]
+        },
+        "noticeConfirmations": [
+          {
+            "noticeId": "00000000-0000-4000-8000-000000000901",
+            "version": "1",
+            "isAcknowledged": true,
+            "confirmedAt": "2026-11-11T09:06:00+08:00"
+          }
+        ],
+        "customerFeedback": {
+          "state": "FOUND",
+          "findings": [
+            {
+              "id": "00000000-0000-4000-8000-000000000091",
+              "source": "CUSTOMER",
+              "pestTypeId": "00000000-0000-4000-8000-000000000061",
+              "areaId": "00000000-0000-4000-8000-000000000041",
+              "position": "后区清洁池",
+              "observedAt": "2026-11-11T09:06:00+08:00",
+              "quantity": {
+                "kind": "EXACT",
+                "value": 15
+              },
+              "description": "客户反馈飞虫15只",
+              "photos": [],
+              "treatmentIds": [
+                "00000000-0000-4000-8000-000000000081"
+              ]
+            }
+          ],
+          "confirmedAt": "2026-11-11T09:06:00+08:00"
+        },
+        "onSiteFindings": {
+          "state": "NONE_FOUND",
+          "findings": [],
+          "confirmedAt": "2026-11-11T09:06:00+08:00"
+        },
+        "assessment": {
+          "isConfirmed": true,
+          "confirmedAt": "2026-11-11T09:06:00+08:00",
+          "sourceRevision": 1,
+          "hasChanged": false,
+          "storeType": "ENCLOSED",
+          "shutterDoor": "ABSENT",
+          "foldingDoor": "ABSENT",
+          "airCurtain": "OFF",
+          "airAngle": "FAIL",
+          "openCeiling": "NO",
+          "sewerWellCount": {
+            "kind": "EXACT",
+            "value": 1
+          },
+          "greeneryDescription": "少量绿植",
+          "nearbyRenovation": "YES",
+          "nearbyVacancy": "NO",
+          "remarks": "已与门店确认",
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000201",
+              "sha256": "ece673cdc8b58a07f5a74c813bcd93ff0fb8b8365acb672a25fb30f63a3b70a0",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ]
+        },
+        "inspections": [
+          {
+            "id": "00000000-0000-4000-8000-000000000092",
+            "facilityId": "00000000-0000-4000-8000-000000000051",
+            "facilityRevision": 1,
+            "checkResult": "CHECKED",
+            "facilityCondition": "NORMAL",
+            "consumableAction": "REPLACED",
+            "captures": [
+              {
+                "pestTypeId": "00000000-0000-4000-8000-000000000061",
+                "quantity": {
+                  "kind": "EXACT",
+                  "value": 10
+                },
+                "treatmentIds": [
+                  "00000000-0000-4000-8000-000000000081"
+                ]
+              },
+              {
+                "pestTypeId": "00000000-0000-4000-8000-000000000062",
+                "quantity": {
+                  "kind": "EXACT",
+                  "value": 38
+                },
+                "treatmentIds": [
+                  "00000000-0000-4000-8000-000000000081"
+                ]
+              }
+            ],
+            "photos": [
+              {
+                "attachmentId": "00000000-0000-4000-8000-000000000202",
+                "sha256": "5089dec566e98bfdee5bc6d3c37ea456012b2013aa13ff96f9e002778d0b30f2",
+                "mediaType": "image/png",
+                "sizeBytes": 1024
+              }
+            ],
+            "remarks": "已维护",
+            "inspectedAt": "2026-11-11T09:06:00+08:00",
+            "treatmentIds": [
+              "00000000-0000-4000-8000-000000000081"
+            ]
+          }
+        ],
+        "facilityChanges": [],
+        "newRisks": [],
+        "riskFollowups": [
+          {
+            "id": "00000000-0000-4000-8000-000000000093",
+            "riskId": "00000000-0000-4000-8000-000000000071",
+            "expectedRiskRevision": 1,
+            "result": "NO_CHANGE",
+            "description": "结构孔洞尚未完成封堵",
+            "materialSource": "ON_SITE",
+            "photos": [
+              {
+                "attachmentId": "00000000-0000-4000-8000-000000000203",
+                "sha256": "0d0e0900d6d1ec8fb33aeb5482e8789be44b8e98f4a0f40c11597f96cd21110d",
+                "mediaType": "image/png",
+                "sizeBytes": 1024
+              }
+            ],
+            "occurredAt": "2026-11-11T09:06:00+08:00"
+          }
+        ],
+        "treatments": [
+          {
+            "id": "00000000-0000-4000-8000-000000000081",
+            "type": "CLEANING",
+            "targets": [
+              {
+                "type": "FINDING",
+                "id": "00000000-0000-4000-8000-000000000091"
+              },
+              {
+                "type": "INSPECTION",
+                "id": "00000000-0000-4000-8000-000000000092"
+              }
+            ],
+            "position": "后区清洁池",
+            "description": "清理残渣并更换耗材",
+            "photos": [
+              {
+                "attachmentId": "00000000-0000-4000-8000-000000000204",
+                "sha256": "c077a14320b563f3169531d91e72c682c298634d9d84603af6689899b0ad8fb4",
+                "mediaType": "image/png",
+                "sizeBytes": 1024
+              }
+            ],
+            "chemicalUses": [],
+            "occurredAt": "2026-11-11T09:30:00+08:00",
+            "nextFocus": "复查清洁保持情况"
+          }
+        ],
+        "summary": {
+          "mainFindings": "客户反馈飞虫，设施捕获分来源记录",
+          "measuresTaken": "清洁和耗材更换",
+          "unresolvedIssues": "孔洞仍需整改",
+          "customerActions": "安排封堵",
+          "nextFocus": "复查风险和捕获情况",
+          "weather": "CLOUDY",
+          "ratings": [
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000061",
+              "level": "MEDIUM",
+              "basis": "存在客户反馈及设施捕获"
+            },
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000062",
+              "level": "UNASSESSED",
+              "basis": "其他捕获尚未分类"
+            }
+          ]
+        },
+        "serviceAttachments": []
+      },
+      "savedAt": "2026-11-11T09:46:00+08:00"
+    },
+    "snapshotId": "00000000-0000-4000-8000-000000000101",
+    "snapshotPayload": {
+      "schemaVersion": "1.0",
+      "serviceId": "00000000-0000-4000-8000-000000000022",
+      "taskId": "00000000-0000-4000-8000-000000000021",
+      "contextId": "00000000-0000-4000-8000-000000000031",
+      "contextDigest": "774e496688a8ad49886bb15885abcf64d526f6b40b65a6b0e3b6f459306eaf48",
+      "content": {
+        "checkin": {
+          "arrivedAt": "2026-11-11T09:06:00+08:00",
+          "location": {
+            "latitude": 31.9,
+            "longitude": 120.3,
+            "accuracyMeters": 12,
+            "provider": "GPS",
+            "capturedAt": "2026-11-11T09:06:00+08:00"
+          },
+          "locationStatus": "NORMAL",
+          "storefrontPhotos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000200",
+              "sha256": "0ab249e38b7673a52955a5f40d846807a0f2a5ba7f8a2aa454dd6938e6597294",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ]
+        },
+        "noticeConfirmations": [
+          {
+            "noticeId": "00000000-0000-4000-8000-000000000901",
+            "version": "1",
+            "isAcknowledged": true,
+            "confirmedAt": "2026-11-11T09:06:00+08:00"
+          }
+        ],
+        "customerFeedback": {
+          "state": "FOUND",
+          "findings": [
+            {
+              "id": "00000000-0000-4000-8000-000000000091",
+              "source": "CUSTOMER",
+              "pestTypeId": "00000000-0000-4000-8000-000000000061",
+              "areaId": "00000000-0000-4000-8000-000000000041",
+              "position": "后区清洁池",
+              "observedAt": "2026-11-11T09:06:00+08:00",
+              "quantity": {
+                "kind": "EXACT",
+                "value": 15
+              },
+              "description": "客户反馈飞虫15只",
+              "photos": [],
+              "treatmentIds": [
+                "00000000-0000-4000-8000-000000000081"
+              ]
+            }
+          ],
+          "confirmedAt": "2026-11-11T09:06:00+08:00"
+        },
+        "onSiteFindings": {
+          "state": "NONE_FOUND",
+          "findings": [],
+          "confirmedAt": "2026-11-11T09:06:00+08:00"
+        },
+        "assessment": {
+          "isConfirmed": true,
+          "confirmedAt": "2026-11-11T09:06:00+08:00",
+          "sourceRevision": 1,
+          "hasChanged": false,
+          "storeType": "ENCLOSED",
+          "shutterDoor": "ABSENT",
+          "foldingDoor": "ABSENT",
+          "airCurtain": "OFF",
+          "airAngle": "FAIL",
+          "openCeiling": "NO",
+          "sewerWellCount": {
+            "kind": "EXACT",
+            "value": 1
+          },
+          "greeneryDescription": "少量绿植",
+          "nearbyRenovation": "YES",
+          "nearbyVacancy": "NO",
+          "remarks": "已与门店确认",
+          "photos": [
+            {
+              "attachmentId": "00000000-0000-4000-8000-000000000201",
+              "sha256": "ece673cdc8b58a07f5a74c813bcd93ff0fb8b8365acb672a25fb30f63a3b70a0",
+              "mediaType": "image/png",
+              "sizeBytes": 1024
+            }
+          ]
+        },
+        "inspections": [
+          {
+            "id": "00000000-0000-4000-8000-000000000092",
+            "facilityId": "00000000-0000-4000-8000-000000000051",
+            "facilityRevision": 1,
+            "checkResult": "CHECKED",
+            "facilityCondition": "NORMAL",
+            "consumableAction": "REPLACED",
+            "captures": [
+              {
+                "pestTypeId": "00000000-0000-4000-8000-000000000061",
+                "quantity": {
+                  "kind": "EXACT",
+                  "value": 10
+                },
+                "treatmentIds": [
+                  "00000000-0000-4000-8000-000000000081"
+                ]
+              },
+              {
+                "pestTypeId": "00000000-0000-4000-8000-000000000062",
+                "quantity": {
+                  "kind": "EXACT",
+                  "value": 38
+                },
+                "treatmentIds": [
+                  "00000000-0000-4000-8000-000000000081"
+                ]
+              }
+            ],
+            "photos": [
+              {
+                "attachmentId": "00000000-0000-4000-8000-000000000202",
+                "sha256": "5089dec566e98bfdee5bc6d3c37ea456012b2013aa13ff96f9e002778d0b30f2",
+                "mediaType": "image/png",
+                "sizeBytes": 1024
+              }
+            ],
+            "remarks": "已维护",
+            "inspectedAt": "2026-11-11T09:06:00+08:00",
+            "treatmentIds": [
+              "00000000-0000-4000-8000-000000000081"
+            ]
+          }
+        ],
+        "facilityChanges": [],
+        "newRisks": [],
+        "riskFollowups": [
+          {
+            "id": "00000000-0000-4000-8000-000000000093",
+            "riskId": "00000000-0000-4000-8000-000000000071",
+            "expectedRiskRevision": 1,
+            "result": "NO_CHANGE",
+            "description": "结构孔洞尚未完成封堵",
+            "materialSource": "ON_SITE",
+            "photos": [
+              {
+                "attachmentId": "00000000-0000-4000-8000-000000000203",
+                "sha256": "0d0e0900d6d1ec8fb33aeb5482e8789be44b8e98f4a0f40c11597f96cd21110d",
+                "mediaType": "image/png",
+                "sizeBytes": 1024
+              }
+            ],
+            "occurredAt": "2026-11-11T09:06:00+08:00"
+          }
+        ],
+        "treatments": [
+          {
+            "id": "00000000-0000-4000-8000-000000000081",
+            "type": "CLEANING",
+            "targets": [
+              {
+                "type": "FINDING",
+                "id": "00000000-0000-4000-8000-000000000091"
+              },
+              {
+                "type": "INSPECTION",
+                "id": "00000000-0000-4000-8000-000000000092"
+              }
+            ],
+            "position": "后区清洁池",
+            "description": "清理残渣并更换耗材",
+            "photos": [
+              {
+                "attachmentId": "00000000-0000-4000-8000-000000000204",
+                "sha256": "c077a14320b563f3169531d91e72c682c298634d9d84603af6689899b0ad8fb4",
+                "mediaType": "image/png",
+                "sizeBytes": 1024
+              }
+            ],
+            "chemicalUses": [],
+            "occurredAt": "2026-11-11T09:30:00+08:00",
+            "nextFocus": "复查清洁保持情况"
+          }
+        ],
+        "summary": {
+          "mainFindings": "客户反馈飞虫，设施捕获分来源记录",
+          "measuresTaken": "清洁和耗材更换",
+          "unresolvedIssues": "孔洞仍需整改",
+          "customerActions": "安排封堵",
+          "nextFocus": "复查风险和捕获情况",
+          "weather": "CLOUDY",
+          "ratings": [
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000061",
+              "level": "MEDIUM",
+              "basis": "存在客户反馈及设施捕获"
+            },
+            {
+              "pestTypeId": "00000000-0000-4000-8000-000000000062",
+              "level": "UNASSESSED",
+              "basis": "其他捕获尚未分类"
+            }
+          ]
+        },
+        "serviceAttachments": []
+      }
+    },
+    "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+    "confirmations": {
+      "previewSessions": [
+        {
+          "id": "00000000-0000-4000-8000-000000000105",
+          "snapshotId": "00000000-0000-4000-8000-000000000101",
+          "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+          "startedAt": "2026-11-11T09:47:40+08:00",
+          "endedAt": "2026-11-11T09:47:50+08:00",
+          "visibleDurationMs": 10000,
+          "isOffline": true
+        }
+      ],
+      "signatures": [
+        {
+          "id": "00000000-0000-4000-8000-000000000103",
+          "role": "STAFF",
+          "snapshotId": "00000000-0000-4000-8000-000000000101",
+          "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+          "signerName": "示例员工",
+          "staffUserId": "00000000-0000-4000-8000-000000000003",
+          "signatureImage": {
+            "attachmentId": "00000000-0000-4000-8000-000000000205",
+            "sha256": "64fdaef45ba05d5e2f796d488aa8e1b008aa2266e2deab1e263007acb04df193",
+            "mediaType": "image/png",
+            "sizeBytes": 1024
+          },
+          "signedAt": "2026-11-11T09:47:00+08:00",
+          "deviceId": "00000000-0000-4000-8000-000000000005",
+          "isAcknowledged": true,
+          "attestationHash": "cd70bed29de68e352ad558478ce307b258bceb71886bf2cf724a636174f24626"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000104",
+          "role": "CUSTOMER",
+          "snapshotId": "00000000-0000-4000-8000-000000000101",
+          "contentHash": "479b68b469e601150d8ffe5cc343c06e0199acf32294ebfc794e8da3f4aa1eb4",
+          "signerName": "示例确认人",
+          "staffSignatureId": "00000000-0000-4000-8000-000000000103",
+          "signatureImage": {
+            "attachmentId": "00000000-0000-4000-8000-000000000206",
+            "sha256": "362f2e51696b381c609eba87d83d2e58f32b2f9f76c9ae9dedf32a831061b1fc",
+            "mediaType": "image/png",
+            "sizeBytes": 1024
+          },
+          "signedAt": "2026-11-11T09:48:00+08:00",
+          "deviceId": "00000000-0000-4000-8000-000000000005",
+          "isAcknowledged": true,
+          "previewSessionId": "00000000-0000-4000-8000-000000000105",
+          "attestationHash": "f759e085fc199cc82e96a05214482d7852606b2bca3688dc82d03062ace37066"
+        }
+      ],
+      "refusals": []
+    },
+    "publicationRequest": {
+      "id": "00000000-0000-4000-8000-000000000106",
+      "snapshotId": "00000000-0000-4000-8000-000000000101",
+      "staffSignatureId": "00000000-0000-4000-8000-000000000103",
+      "customerSignatureId": "00000000-0000-4000-8000-000000000104"
+    },
+    "submittedAt": "2026-11-11T10:00:00+08:00"
+  }
+}

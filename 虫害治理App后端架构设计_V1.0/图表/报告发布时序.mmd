@@ -1,0 +1,20 @@
+sequenceDiagram
+  participant A as 安卓或后台
+  participant API as API
+  participant DB as MySQL
+  participant W as Worker
+  participant O as 私有对象存储
+  A->>API: 请求发布 snapshotId
+  API->>DB: 锁 task/service 验证双签并写 publication_job/job_queue
+  API-->>A: 202 jobId
+  W->>DB: 短事务 SKIP LOCKED 领取租约 token
+  W->>O: 读取固定资料并校验摘要
+  W->>W: 事务外渲染 PDF
+  W->>O: 上传独立对象并校验
+  W->>DB: 最终事务重验版本、派工、附件、双签、租约
+  alt 所有条件仍有效
+    W->>DB: 原子替换当前报告、完成服务任务、标任务成功
+  else 前提失效
+    W->>DB: 阻断发布并保留异常
+  end
+  A->>API: 轮询结果及鉴权下载
